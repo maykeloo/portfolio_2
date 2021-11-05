@@ -11,7 +11,7 @@ export const SidebarBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 998;
 
     @media screen and (max-width: 920px)
     {
@@ -38,14 +38,15 @@ export const SidebarContentBox = styled.div`
 
 export const LinkBar = styled.nav`
     width: 60%;
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
 `
 
 export const LinkTo = styled.a`
-    font-size: 6vw;
+    font-size: 5vw;
     font-weight: bold;
     color: black;
     position: relative;

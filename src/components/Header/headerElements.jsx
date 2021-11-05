@@ -9,7 +9,7 @@ export const HeaderBox = styled.div`
     background-color: ${props => props.active ? 'white' : 'black'};
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 999;
 
     
     @media screen and (max-width: 920px)
