@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Contact from './components/Contact/Contact';
+import { Sections } from './components/appElements';
+import Header from './components/Header/Header';
+import Intro from './components/Intro/Intro';
+import Portfolio from './components/Portfolio/Portfolio';
+import Works from './components/Works/Works';
+import React,{useState} from 'react';
+import Sidebar from './components/Sidebar/Sidebar';
 
 function App() {
+
+  const [isActive, setActive] = useState(false);
+  const setActiveHandler = () => setActive(!isActive);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header isActive = {isActive} setActiveHandler = {setActiveHandler}/>
+      <Sidebar isActive = {isActive} setActiveHandler = {setActiveHandler}/>
+      <Sections>
+        <Intro/>
+        <Portfolio/>
+        <Works/>
+        <Contact/>
+      </Sections>
+    </>
   );
 }
 
